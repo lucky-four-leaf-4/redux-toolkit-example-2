@@ -9,12 +9,10 @@ export const currentPageSlice = createSlice({
   initialState,
   reducers: {
     nextPage: (state) => {
-      console.log(`state.value ${state.value}`);
       state.value += 1;
-      console.log(`after state.value ${state.value}`);
     },
     prePage: (state) => {
-      if (0 < state.value) {
+      if (1 < state.value) {
         state.value -= 1;
       }
     },

@@ -19,11 +19,8 @@ export default function App() {
   });
 
   useEffect(() => {
-    console.log(dataStatus);
-    if (dataStatus === "") {
-    }
     dispatch(fetchData(currentPage));
-  }, [dataStatus, currentPage, dispatch]);
+  }, [currentPage, dispatch]);
 
   const onClickPre = () => {
     dispatch(prePage());
